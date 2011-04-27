@@ -1,3 +1,3 @@
 //class for buhgalter interface
 
-class
+class buhgaltery
