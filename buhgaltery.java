@@ -1,0 +1,1 @@
+//class for buhgalter interface
