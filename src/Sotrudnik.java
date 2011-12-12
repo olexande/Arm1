@@ -10,7 +10,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Sotrudnik /*implements Comparable*/ {
+public class Sotrudnik implements Comparable {
     // ID сотрудника.
     private int personID;
     // Имя сотрудника
