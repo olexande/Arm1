@@ -81,8 +81,8 @@ public class ManagementSystem {
         for (Otdel gi : otdels) {
             printString("---> Группа:" + gi.getNameOtdel());
             // Получаем список студентов для конкретной группы
-            Collection<Sotrudnik> students = ms.getSotrudnikFromOtdel(gi, 2006);
-            for (Sotrudnik si : students) {
+            Collection<Sotrudnik> sotrudniks = ms.getSotrudnikFromOtdel(gi, 2006);
+            for (Sotrudnik si : sotrudniks) {
                 printString(si);
             }
         }
@@ -291,7 +291,7 @@ public class ManagementSystem {
     }
 
     // Удалить всех студентов из определенной группы
-    public void removeStudentsFromGroup(Otdel otdel, int year) {
+    public void removeSotrudniksFromGroup(Otdel otdel, int year) {
         // Мы создадим новый список студентов БЕЗ тех, кого мы хотим удалить.
         // Возможно не самый интересный вариант. Можно было бы продемонстрировать
         // более элегантный метод, но он требует погрузиться в коллекции более глубоко
@@ -334,15 +334,15 @@ public class ManagementSystem {
     // Удалить студента
     public void deleteSotrudnik(Sotrudnik sotrudnik) {
         // Надо найти нужного студента (по его ИД) и удалить
-        Sotrudnik delStudent = null;
+        Sotrudnik delSotrudnik = null;
         for (Sotrudnik si : sotrudniks) {
             if (si.getPersonID() == sotrudnik.getPersonID()) {
                 // Вот этот студент - запоминаем его и прекращаем цикл
-                delStudent = si;
+                delSotrudnik = si;
                 break;
             }
         }
-        sotrudniks.remove(delStudent);
+        sotrudniks.remove(delSotrudnik);
     }
 
     // Этот код позволяет нам изменить кодировку
