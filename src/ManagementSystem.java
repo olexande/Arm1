@@ -90,10 +90,11 @@ public class ManagementSystem {
         s.setDateOfBirth(c.getTime());
         s.setOtdelID(1);
         s.setEducationYear(2006);
-        printString("Добавление студента:" + s);
+        printString("Добавление студента: ");
+        printString("       " + s);
         printString("********************");
         ms.insertSotrudnik(s);
-        printString("--->> Полный список студентов после добавления");
+        printString("--->> Полный список студентов после добавления: ");
         allSotrudniks = ms.getAllSotrudniks();
         for (Sotrudnik si : allSotrudniks) {
             printString(si);
@@ -113,10 +114,11 @@ public class ManagementSystem {
         s.setDateOfBirth(c.getTime());
         s.setOtdelID(1);
         s.setEducationYear(2006);
-        printString("Редактирование данных студента:" + s);
+        printString("Редактирование данных студента: ");
+        printString("       " + s);
         printString("*******************************");
         ms.updateSotrudnik(s);
-        printString("--->> Полный список студентов после редактирования");
+        printString("--->> Полный список студентов после редактирования ");
         allSotrudniks = ms.getAllSotrudniks();
         for (Sotrudnik si : allSotrudniks) {
             printString(si);
@@ -124,10 +126,11 @@ public class ManagementSystem {
         printString();
 
         // Удалим нашего студента
-        printString("Удаление студента:" + s);
+        printString("Удаление студента: ");
+        printString("       " + s);
         printString("******************");
         ms.deleteSotrudnik(s);
-        printString("--->> Полный список студентов после удаления");
+        printString("--->> Полный список студентов после удаления ");
         allSotrudniks = ms.getAllSotrudniks();
         for (Sotrudnik si : allSotrudniks) {
             printString(si);
@@ -139,7 +142,7 @@ public class ManagementSystem {
         // Не совсем элегантное решение, но пока сделаем так
         Otdel g1 = otdels.get(0);
         Otdel g2 = otdels.get(1);
-        printString("Перевод студентов из 1-ой во 2-ю группу");
+        printString("Перевод студентов из 1-ой во 2-ю группу ");
         printString("***************************************");
         ms.moveSotrudniksToGroup(g1, 2006, g2, 2007);
         printString("--->> Полный список студентов после перевода");
@@ -150,7 +153,8 @@ public class ManagementSystem {
         printString();
 
         // Удаляем студентов из группы
-        printString("Удаление студентов из группы:" + g2 + " в 2006 году");
+        printString("Удаление студентов из группы: ");
+        printString("       " + g2 + " в 2006 году");
         printString("*****************************");
         ms.removeSotrudniksFromOtdel(g2, 2006);
         printString("--->> Полный список студентов после удаления");
@@ -341,7 +345,7 @@ public class ManagementSystem {
     public static void printString(Object s) {
         //System.out.println(s.toString());
         try {
-            System.out.println(new String(s.toString().getBytes("windows-1251"), "windows-1252"));
+            System.out.println(new String(s.toString().getBytes("windows-1251"), "windows-1251"));
         } catch (UnsupportedEncodingException ex) {
             ex.printStackTrace();
         }
