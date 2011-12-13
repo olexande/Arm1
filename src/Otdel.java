@@ -1,7 +1,3 @@
-/**
- *
- * @author a.belovol
- */
 public class Otdel {
     
     // поле ИД отдел

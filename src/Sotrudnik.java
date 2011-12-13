@@ -1,10 +1,3 @@
-
-
-/**
- *
- * @author a.belovol
- */
-
 import java.text.Collator;
 import java.text.DateFormat;
 import java.util.Date;
