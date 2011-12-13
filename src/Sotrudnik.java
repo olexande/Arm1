@@ -49,10 +49,10 @@ public class Sotrudnik implements Comparable {
     }
     
     // get/set для ИД Отдела
-    public int getotdelID() {
+    public int getOtdelID() {
         return otdelID;
     }
-    public void setDepatId(int otdelID) {
+    public void setOtdelID(int otdelID) {
         this.otdelID = otdelID;
     }
     

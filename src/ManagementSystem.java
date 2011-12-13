@@ -162,7 +162,7 @@ public class ManagementSystem {
         // Удаляем студентов из группы
         printString("Удаление студентов из группы:" + g2 + " в 2006 году");
         printString("*****************************");
-        ms.removeStudentsFromGroup(g2, 2006);
+        ms.removeSotrudniksFromOtdel(g2, 2006);
         printString("--->> Полный список студентов после удаления");
         allSotrudniks = ms.getAllSotrudniks();
         for (Iterator i = allSotrudniks.iterator(); i.hasNext();) {
@@ -270,7 +270,7 @@ public class ManagementSystem {
     }
 
     // Получить список студентов для определенной группы
-    public Collection<Sotrudnik> getSotrudnikFromGroup(Otdel otdel, int year) {
+    public Collection<Sotrudnik> getSotrudnikFromOtdel(Otdel otdel, int year) {
         Collection<Sotrudnik> l = new TreeSet<Sotrudnik>();
         for (Sotrudnik si : sotrudniks) {
             if (si.getOtdelID() == otdel.getOtdelID() && si.getEducationYear() == year) {
@@ -291,7 +291,7 @@ public class ManagementSystem {
     }
 
     // Удалить всех студентов из определенной группы
-    public void removeSotrudniksFromGroup(Otdel otdel, int year) {
+    public void removeSotrudniksFromOtdel(Otdel otdel, int year) {
         // Мы создадим новый список студентов БЕЗ тех, кого мы хотим удалить.
         // Возможно не самый интересный вариант. Можно было бы продемонстрировать
         // более элегантный метод, но он требует погрузиться в коллекции более глубоко
@@ -327,7 +327,7 @@ public class ManagementSystem {
         updStudent.setPersonSurName(sotrudnik.getPersonSurName());
         updStudent.setSex(sotrudnik.getSex());
         updStudent.setDateOfBirth(sotrudnik.getDateOfBirth());
-        updStudent.setGroupId(sotrudnik.getOtdelID());
+        updStudent.setOtdelID(sotrudnik.getOtdelID());
         updStudent.setEducationYear(sotrudnik.getEducationYear());
     }
 
