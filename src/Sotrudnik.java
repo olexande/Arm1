@@ -36,6 +36,9 @@ public class Sotrudnik implements Comparable {
     public int getEducationYear() {
         return educationYear;
     }
+        public void setEducationYear(int educationYear) {
+        this.educationYear = educationYear;
+    }
     
     // get/set для ДАТА РОЖДЕНИЯ
     public Date getDateOfBirth() {
@@ -57,7 +60,7 @@ public class Sotrudnik implements Comparable {
     public int getPersonID() {
         return personID;
     }
-    public void setPersonId(int personID) {
+    public void setPersonID(int personID) {
         this.personID = personID;
     }
     
@@ -73,7 +76,7 @@ public class Sotrudnik implements Comparable {
     public String getPersonPatronymicName() {
         return personPatronymicName;
     }
-    public void setPatronymic(String personPatronymicName) {
+    public void setPersonPatronymicName(String personPatronymicName) {
         this.personPatronymicName = personPatronymicName;
     }
     
