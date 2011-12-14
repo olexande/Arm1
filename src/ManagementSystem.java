@@ -90,8 +90,7 @@ public class ManagementSystem {
         s.setDateOfBirth(c.getTime());
         s.setOtdelID(1);
         s.setEducationYear(2006);
-        printString("Добавление студента: ");
-        printString("       " + s);
+        printString("Добавление студента: " + s);
         printString("********************");
         ms.insertSotrudnik(s);
         printString("--->> Полный список студентов после добавления: ");
